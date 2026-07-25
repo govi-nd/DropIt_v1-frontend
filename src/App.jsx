@@ -7,7 +7,7 @@ import { UploadProgress } from "@/components/UploadProgress";
 import { QRDisplay } from "@/components/QRDisplay";
 import { DownloadPage } from "@/pages/DownloadPage";
 
-const BACKEND_URL = process.env.BACKEND_URL
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
 function Index() {
   const [files, setFiles] = useState([]);
   const [stage, setStage] = useState("idle");
